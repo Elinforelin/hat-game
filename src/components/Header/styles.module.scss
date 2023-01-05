@@ -1,0 +1,18 @@
+@import "src/styles/fonts";
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .title {
+    font-family: $titleFont;
+    padding: 0 15px;
+    font-size: 20px;
+  }
+}

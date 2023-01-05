@@ -1,0 +1,10 @@
+@import "src/styles/fonts";
+
+.root {
+  margin: 8px 0 !important;
+  background: grey ;
+  padding: 10px 50px !important;
+  font-family: $titleFont;
+  font-weight: 600 !important;
+  border-radius: 10px ;
+}
