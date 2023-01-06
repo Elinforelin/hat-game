@@ -8,18 +8,26 @@
   flex-direction: column;
   align-items: center;
   .logoContainer {
-    width: 130px;
+    width: 118px;
     height: 130px;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 40px;
+    animation-name: logoContainer;
+    animation-duration: 2s;
     h1 {
-      font-size: 30px;
+      font-size: 40px;
       color: #f2f4e8;
       font-family: $titleFont;
       font-weight: 800;
+
+    }
+    .animatedTitle{
+      animation-name: title;
+      animation-duration: 2s;
+      animation-timing-function: linear;
     }
   }
   .buttonContainer {
@@ -28,11 +36,51 @@
     justify-content: space-between;
     button {
       margin: 8px 0;
-      background: grey;
-      padding: 10px 50px;
+      padding: 15px 80px;
       font-family: $titleFont;
       font-weight: 600;
       border-radius: 10px;
+      animation-name: button;
+      animation-duration: 2s;
+
     }
+    .btn1 {
+      animation-name: button1;
+      animation-timing-function: linear;
+    }
+    .btn2 {
+      animation-name: button2;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+@keyframes button1 {
+  0% {
+    left: 0;
+  }
+  50% {
+
+  }
+  100% {
+    left: 1000px;
+  }
+}
+@keyframes button2 {
+  0% {
+    right: 0;
+  }
+  50% {
+
+  }
+  100% {
+    right: 1000px;
+  }
+}
+@keyframes title {
+
+  100% {
+    font-size: 150px;
+    color: transparent;
   }
 }

@@ -1,5 +1,5 @@
 export type InitialStateTeams = {
-  id: number;
+  // id: number;
   name: string;
   totalScore: number;
   roundScore: number;

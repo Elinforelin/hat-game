@@ -13,7 +13,7 @@ const BackArrowButton: FC = () => {
   return (
     <div className={styles.backArrowContainer}>
       <Button onClick={onGoBack}>
-        <ArrowBackIcon color="action" fontSize="medium" />
+        <ArrowBackIcon color="secondary" fontSize="medium" />
       </Button>
     </div>
   );

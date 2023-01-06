@@ -3,20 +3,14 @@ import { InitialStateTeams } from "./types";
 
 const initialState: InitialStateTeams = [
   {
-    id: 1,
+    // id: 1,
     name: "Apples",
     totalScore: 0,
     roundScore: 0,
   },
   {
-    id: 2,
+    // id: 2,
     name: "Orange",
-    totalScore: 0,
-    roundScore: 0,
-  },
-  {
-    id: 3,
-    name: "Cucumber",
     totalScore: 0,
     roundScore: 0,
   },
@@ -32,9 +26,12 @@ export const teamsSlice = createSlice<
     setNewTeam: (state, action) => {
       return [...state, action.payload];
     },
+    removeTeam: (state, action) => {
+      return [...state.filter(({ name }) => name !== action.payload)];
+    },
   },
 });
 
-export const { setNewTeam } = teamsSlice.actions;
+export const { setNewTeam, removeTeam } = teamsSlice.actions;
 
 export default teamsSlice.reducer;
