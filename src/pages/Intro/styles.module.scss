@@ -1,10 +1,24 @@
 @import "src/styles/_fonts.scss";
+@import "src/styles/colors";
 
 .container {
   background-color: rgba(255, 255, 255, .3);
   height: 100vh;
   .settingsContainer {
     margin: 58px 0 0 0;
+  }
+  .roundInfo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $titleFont;
+    font-weight: 600;
+    color: #262525;
+    .teamName {
+      color: $mainBackgroundColor;
+    }
   }
   .nextButton {
     position: absolute;

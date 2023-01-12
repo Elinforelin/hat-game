@@ -1,5 +1,9 @@
-import { InitialStateTeams } from "./teams/types";
+import { InitialStateTeam } from "./teams/types";
+import { InitialStateSettings } from "./settings/types";
+import { InitialStateRoundInfo } from "./roundInfo/types";
 
 export type typesRootReducer = {
-  teams: InitialStateTeams;
+  teams: InitialStateTeam[];
+  settings: InitialStateSettings;
+  roundInfo: InitialStateRoundInfo;
 };

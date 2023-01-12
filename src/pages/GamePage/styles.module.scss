@@ -1,0 +1,30 @@
+@import "src/styles/_fonts.scss";
+@import "src/styles/colors";
+
+.container {
+  background-color: rgba(255, 255, 255, .3);
+  height: 100vh;
+  .gameContainer {
+    padding: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    .startButton {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      button {
+        font-family: $titleFont;
+        font-size: 20px;
+        background-color: transparent;
+      }
+    }
+  }
+
+
+}

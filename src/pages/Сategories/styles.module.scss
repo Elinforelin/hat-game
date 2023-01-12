@@ -1,0 +1,36 @@
+@import './src/styles/fonts';
+@import './src/styles/colors';
+
+.container {
+  background-color: rgba(255, 255, 255, .3);
+  height:  100vh;
+  display: flex;
+  flex-direction: column;
+  .categoriesList {
+    background-color: rgba(255, 255, 255, .7);
+    margin: 60px 0 0 0;
+    .categoriesListMember {
+      display: flex;
+      height: 60px;
+      justify-content: space-between;
+      padding: 0 10px 0 10px;
+      align-items: center;
+      font-family: $titleFont;
+      width: 100%;
+      &:not(:last-child) {
+        border-bottom: 1px grey solid;
+      }
+      .subtitle {
+        font-size: 12px;
+      }
+      .title {
+        font-size: 20px;
+      }
+      .wordsNumber {
+        color: $mainBackgroundColor;
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+}

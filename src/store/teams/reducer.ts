@@ -1,15 +1,13 @@
 import { createSlice, SliceCaseReducers } from "@reduxjs/toolkit";
-import { InitialStateTeams } from "./types";
+import { InitialStateTeam } from "./types";
 
-const initialState: InitialStateTeams = [
+const initialState: InitialStateTeam[] = [
   {
-    // id: 1,
     name: "Apples",
     totalScore: 0,
     roundScore: 0,
   },
   {
-    // id: 2,
     name: "Orange",
     totalScore: 0,
     roundScore: 0,
@@ -17,8 +15,8 @@ const initialState: InitialStateTeams = [
 ];
 
 export const teamsSlice = createSlice<
-  InitialStateTeams,
-  SliceCaseReducers<InitialStateTeams>
+  InitialStateTeam[],
+  SliceCaseReducers<InitialStateTeam[]>
 >({
   name: "teams",
   initialState,

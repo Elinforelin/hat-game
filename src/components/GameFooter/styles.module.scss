@@ -1,0 +1,41 @@
+@import "src/styles/fonts";
+
+.container {
+  //height: 100px;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(#484848, grey);
+  flex-direction: column;
+  .restOfWords {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    font-family: $titleFont;
+    font-size: 18px;
+    color: white;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .teamsInfo{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    .team{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      font-family: $titleFont;
+      color: white;
+      font-size: 14px;
+    }
+  }
+
+}

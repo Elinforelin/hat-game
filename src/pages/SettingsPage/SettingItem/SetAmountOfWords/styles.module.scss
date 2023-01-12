@@ -1,0 +1,31 @@
+@import './src/styles/fonts';
+@import './src/styles/colors';
+
+.container{
+ display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80px;
+  border-bottom: 1px grey solid ;
+  .wordsContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px 0 10px;
+    .title{
+      font-family: $titleFont;
+      font-size: 20px;
+    }
+    .amount{
+      font-family: $titleFont;
+      font-size: 20px;
+      color: $mainBackgroundColor;
+      font-weight: 800;
+    }
+  }
+  .slider{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+}
