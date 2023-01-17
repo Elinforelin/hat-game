@@ -7,8 +7,21 @@ const initialState: InitialStateRoundInfo = {
     totalScore: 0,
     roundScore: 0,
   },
-  wordsInGame: [],
-  wordsOutOfGame: [],
+  wordsInGame: [
+    "cake",
+    "call",
+    "can",
+    "candle",
+    "cap",
+    "car",
+    "card",
+    "care",
+    "careful",
+    "careless",
+    "carry",
+  ],
+  guessedWords: [],
+  unguessedWords: [],
   numberOfRound: 1,
 };
 
@@ -22,9 +35,18 @@ export const roundInfoSlice = createSlice<
     setWordsInGame: (state, action) => {
       state.wordsInGame = action.payload;
     },
+    setGuessedWord: (state, action) => {
+      state.guessedWords = [...state.guessedWords, action.payload];
+      state.wordsInGame = state.wordsInGame.filter((w) => w !== action.payload);
+    },
+    setUnguessedWord: (state, action) => {
+      state.guessedWords = [...state.unguessedWords, action.payload];
+      state.wordsInGame = state.wordsInGame.filter((w) => w !== action.payload);
+    },
   },
 });
 
-export const { setWordsInGame } = roundInfoSlice.actions;
+export const { setWordsInGame, setGuessedWord, setUnguessedWord } =
+  roundInfoSlice.actions;
 
 export default roundInfoSlice.reducer;

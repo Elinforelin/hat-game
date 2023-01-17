@@ -58,12 +58,13 @@ const SetTeamsPage: FC = () => {
   const onNextPageHandler = () => {
     navigate(SETTINGS);
   };
+  console.log("12345");
 
   return (
     <div className={styles.container}>
       <Header nameOfPage="Teams" />
       <ul className={styles.teamList}>
-        {teams.map((t) => (
+        {teams?.map((t) => (
           <li
             className={styles.teamsListMember}
             key={t.name}

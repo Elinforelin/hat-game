@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 
 import WelcomePage from "../pages/WelcomePage";
 import SettingsPage from "../pages/SettingsPage";
@@ -16,30 +16,39 @@ import GameHeader from "../components/GameHeader";
 import Intro from "../pages/Intro";
 import GamePage from "../pages/GamePage";
 
+const HeaderLayout = () => (
+  <>
+    <WelcomePage />
+    <Outlet />
+  </>
+);
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <WelcomePage />,
-  },
-  {
-    path: SETTINGS,
-    element: <SettingsPage />,
-  },
-  {
-    path: SET_TEAMS,
-    element: <SetTeamsPage />,
-  },
-  {
-    path: CATEGORIES,
-    element: <Categories />,
-  },
-  {
-    path: INTRO,
-    element: <Intro />,
-  },
-  {
-    path: GAME,
-    element: <GamePage />,
+    element: <HeaderLayout />,
+    children: [
+      {
+        path: SETTINGS,
+        element: <SettingsPage />,
+      },
+      {
+        path: SET_TEAMS,
+        element: <SetTeamsPage />,
+      },
+      {
+        path: CATEGORIES,
+        element: <Categories />,
+      },
+      {
+        path: INTRO,
+        element: <Intro />,
+      },
+      {
+        path: GAME,
+        element: <GamePage />,
+      },
+    ],
   },
 ]);
 

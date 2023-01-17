@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    .startButton {
+    .gameButton {
       width: 150px;
       height: 150px;
       border-radius: 50%;
@@ -18,13 +18,49 @@
       justify-content: center;
       align-items: center;
       background-color: white;
+
       button {
         font-family: $titleFont;
         font-size: 20px;
         background-color: transparent;
+        animation-name: gameButton;
       }
     }
+    .styleUp {
+      animation-name: up;
+      animation-duration: 1s;
+    }
+    .styleDown {
+      animation-name: down;
+      animation-duration: 1s;
+    }
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(1%);
   }
 
+  to {
+    transform: translateY(-100%);
+    background-color: transparent;
 
+  }
+}
+@keyframes down {
+  from {
+    transform: translateY(1%);
+  }
+
+  to {
+    transform: translateY(100%);
+    background-color: transparent;
+  }
+}
+
+@keyframes gameButton {
+  to {
+    color: transparent;
+  }
 }
